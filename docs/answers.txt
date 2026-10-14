@@ -1,0 +1,54 @@
+1. Git Status Output
+
+I saved the output from step 3.C in docs/status.txt. Here is my latest Git status:
+
+
+On branch master
+Your branch is up to date with origin/master.
+
+nothing to commit, working tree clean
+
+
+2. How many commits have been done to the repository so far? What command did you use?
+
+There have been 9 commits made to the repository so far. I used the command git rev-list --count HEAD to find the total number of commits.
+
+3. When was README.md last modified? What command did you use?
+
+README.md was last modified on October 14, 2026. I used git log -1 --format="%ad" --date=short -- README.md to check the date.
+
+4. Mention two reasons why branches are used in a Git repository.
+
+Branches let developers work on different features without messing up the main version of the project. They're also useful when multiple people are working on the same project because everyone can make changes separately and merge them together when they're ready.
+
+5. What is the difference between git log and git status?
+
+git log shows the commit history of a repository, including previous commits and their information. git status shows what's currently going on in the working directory, like modified files, staged changes, and whether there is anything that needs to be committed.
+
+6. What command would you use to see the commits where Vehicle.h was one of the committed files?
+
+git log -- Vehicle.h
+
+This command shows the commits that included changes to the Vehicle.h file.
+
+7. What command would you use to see the commits whose commit message contains the word "file"?
+
+git log --grep="file"
+
+This command searches the commit history and displays commits that have the word "file" in their commit message.
+
+8. In the context of object-oriented programming, what is inheritance, polymorphism, and encapsulation?
+
+Inheritance is when one class gets properties and methods from another class. It helps reuse code instead of having to write the same things multiple times.
+
+Polymorphism allows different classes to use the same method or interface but have different implementations. For example, different types of vehicles could each have their own version of a start() method.
+
+Encapsulation is when a class keeps its data and related methods together while controlling how that data can be accessed. This is usually done using public, private, and protected access modifiers in C++.
+
+9. What is the main difference between the "Dictator and Lieutenants" workflow and the "Integration Manager" workflow?
+
+The main difference is how the changes are managed before being added to the main repository. In the Integration Manager workflow, developers push their changes to their own public repositories, and one integration manager handles merging everything together and resolving conflicts. In the Dictator and Lieutenants workflow, there are multiple lieutenants who manage changes from smaller groups of developers before passing them to the dictator. The dictator then merges those changes into the main repository. Basically, the second workflow spreads out the responsibility instead of having one person handle everything.
+
+10. How would a team of 100 developers benefit from following the "Dictator and Lieutenants" workflow instead of the "Centralized" workflow?
+
+For a team of 100 developers, the Dictator and Lieutenants workflow would make managing changes a lot easier. Instead of everyone pushing to one shared repository and dealing with conflicts individually, developers would work with assigned lieutenants who review and merge changes from smaller groups. This would help keep everything organized, reduce the number of conflicts reaching the main repository, and prevent one person from having to manage changes from all 100 developers. It would also make it easier for different groups to work on separate parts of the project.
